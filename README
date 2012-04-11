@@ -1,0 +1,42 @@
+Padre-Plugin-Pedro
+
+This provides a simple Perl JavaScript-based editor that can be run as a 
+Mojolicious::Lite/Mojolicious plugin.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Padre::Plugin::Pedro
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Padre-Plugin-Pedro
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/Padre-Plugin-Pedro
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/Padre-Plugin-Pedro
+
+    Search CPAN
+        http://search.cpan.org/dist/Padre-Plugin-Pedro
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2012 Ahmad M. Zawawi
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.

@@ -1,0 +1,17 @@
+Changes
+lib/Mojolicious/Plugin/Pedro.pm
+lib/Mojolicious/Plugin/Pedro/Controller.pm
+lib/Mojolicious/Plugin/Pedro/public/js/ace.js
+lib/Mojolicious/Plugin/Pedro/public/js/mode-perl.js
+lib/Mojolicious/Plugin/Pedro/public/js/pedro.js
+lib/Mojolicious/Plugin/Pedro/public/js/theme-eclipse.js
+lib/Mojolicious/Plugin/Pedro/templates/controller/default.html.ep
+Makefile.PL
+MANIFEST			This list of files
+MYMETA.json
+MYMETA.yml
+README
+script/pedro
+t/basic.t
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+use Mojolicious::Lite;
+
+use lib qw(lib ../lib);
+plugin 'Pedro';
+
+app->start;
