@@ -1,7 +1,30 @@
 Padre-Plugin-Pedro
 
-This provides a simple Perl JavaScript-based editor that can be run as a 
-Mojolicious::Lite/Mojolicious plugin.
+This is a web-based Perl editor that runs inside your favorite modern
+browser. It can embedded in your Mojolicious plugin to edit your files,
+or it can be be run as a separate Pedro process.
+
+There are several operation modes for Pedro:
+
+- As a separate Pedro process, please run the following command and it will 
+launch the default browser automatically:
+
+    pedro
+
+- As a L<Mojolicious> plugin, please add the following lines to your
+  script to enable /pedro route:
+
+    $self->plugin('Pedro');
+
+- As L<Mojolicious::Lite> plugin, please add the following lines to your
+  script to enable /pedro route:
+
+    plugin 'Pedro';
+
+To access Pedro, please type *[http://127.0.0.1:3000/pedro]* after your
+Mojolicious application starts.
+
+
 
 INSTALLATION
 
@@ -22,7 +45,7 @@ perldoc command.
 You can also look for information at:
 
     RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Padre-Plugin-Pedro
+        http://code.google.com/p/mojolicious-plugin-pedro/issues/list
 
     AnnoCPAN, Annotated CPAN documentation
         http://annocpan.org/dist/Padre-Plugin-Pedro

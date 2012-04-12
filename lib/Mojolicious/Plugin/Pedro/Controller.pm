@@ -1,13 +1,16 @@
 package Mojolicious::Plugin::Pedro::Controller;
 use Mojo::Base 'Mojolicious::Controller';
 
+our $VERSION = '0.02';
+
+use PPI  ();
+
 sub line_tokens {
     my $self = shift;
     my $line = $self->param('line') || '';
 
     my @tokens = ();
 
-    require PPI;
     my $doc = PPI::Document->new( \$line );
 
     my $doc_tokens = $doc->find('PPI::Token');

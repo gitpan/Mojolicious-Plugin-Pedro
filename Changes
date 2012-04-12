@@ -1,4 +1,12 @@
 Changes for Mojolicious-Plugin-Pedro
 
+0.02  2012.4.12   ** Ahmad M. Zawawi (aZaWaWi) **
+    - Pedro script can now open the default browser after starting the 
+      webserver daemon.
+    - Increased the default size of Pedro editor window
+    - All of ace editor code is now in public/js/ace.
+    - Added missing dependencies
+    - Added more documentation and linked bugs to code.google.com
+
 0.01  2012.4.11   ** Ahmad M. Zawawi (aZaWaWi) **
     - Initial release to CPAN

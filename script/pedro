@@ -5,4 +5,20 @@ use Mojolicious::Lite;
 use lib qw(lib ../lib);
 plugin 'Pedro';
 
-app->start;
+# Open the web browser after the webserver daemon is started
+Mojo::IOLoop->timer(
+    0 => sub {
+        require Browser::Open;
+        my $url = 'http://127.0.0.1:3000/pedro';
+        if ( $^O eq 'MSWin32' ) {
+            Browser::Open::open_browser($url);
+        }
+        else {
+
+            # Workaround to avoid blocking on non-win32
+            my $cmd = Browser::Open::open_browser_cmd() . " $url &";
+            system($cmd);
+        }
+    }
+);
+app->start( 'daemon', '-l', 'http://*:3000' );

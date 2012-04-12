@@ -1,5 +1,5 @@
 ---
-abstract: 'A web-based Perl editor disguised as a Mojolicious plugin :)'
+abstract: 'A web-based Perl editor Mojolicious plugin'
 author:
   - 'Ahmad M. Zawawi <ahmad.zawawi@gmail.com>'
 build_requires:
@@ -18,5 +18,7 @@ no_index:
     - t
     - inc
 requires:
+  Browser::Open: 0.04
   Mojolicious: 2.80
-version: 0.01
+  PPI: 1.215
+version: 0.02

@@ -4,14 +4,14 @@
 <style>
 #editor {
 	position: absolute;
-	width: 400px;
-	height: 200px;
+	width: 980px; 
+	height: 554px; 
 }
 </style>
 <script src="../js/jquery.js" type="text/javascript"></script>
-<script src="../js/ace.js" type="text/javascript"></script>
-<script src="../js/theme-eclipse.js" type="text/javascript"></script>
-<script src="../js/mode-perl.js" type="text/javascript"></script>
+<script src="../js/ace/ace.js" type="text/javascript"></script>
+<script src="../js/ace/theme-eclipse.js" type="text/javascript"></script>
+<script src="../js/ace/mode-perl.js" type="text/javascript"></script>
 <script src="../js/pedro.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function() {
@@ -20,8 +20,7 @@
 </script>
 </head>
 <body>
-	<div style="position: relative; height: 250px;">
-		<div id="editor"># a comment; 
+	<div id="editor"># a comment; 
 use v5.10;
 use strict; 
 use warnings; 
@@ -33,7 +32,6 @@ print <<'...';
 2
 3
 ...
-</div>
 	</div>
 </body>
 </html>
