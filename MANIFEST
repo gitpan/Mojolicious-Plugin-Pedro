@@ -2,7 +2,21 @@ Changes
 lib/Mojolicious/Plugin/Pedro.pm
 lib/Mojolicious/Plugin/Pedro/Controller.pm
 lib/Mojolicious/Plugin/Pedro/public/css/codemirror.css
+lib/Mojolicious/Plugin/Pedro/public/css/dialog.css
 lib/Mojolicious/Plugin/Pedro/public/css/pedro.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/ambiance.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/blackboard.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/cobalt.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/eclipse.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/elegant.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/erlang-dark.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/lesser-dark.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/monokai.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/neat.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/night.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/rubyblue.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/vibrant-ink.css
+lib/Mojolicious/Plugin/Pedro/public/css/theme/xq-dark.css
 lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png
 lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png
 lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png
@@ -22,6 +36,10 @@ lib/Mojolicious/Plugin/Pedro/public/js/codemirror.js
 lib/Mojolicious/Plugin/Pedro/public/js/jquery-ui-1.8.18.custom.min.js
 lib/Mojolicious/Plugin/Pedro/public/js/pedro.js
 lib/Mojolicious/Plugin/Pedro/public/js/perl.js
+lib/Mojolicious/Plugin/Pedro/public/js/util/dialog.js
+lib/Mojolicious/Plugin/Pedro/public/js/util/match-highlighter.js
+lib/Mojolicious/Plugin/Pedro/public/js/util/search.js
+lib/Mojolicious/Plugin/Pedro/public/js/util/searchcursor.js
 lib/Mojolicious/Plugin/Pedro/templates/controller/default.html.ep
 Makefile.PL
 MANIFEST			This list of files

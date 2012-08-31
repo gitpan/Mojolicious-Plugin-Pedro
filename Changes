@@ -1,9 +1,18 @@
 Changes for Mojolicious-Plugin-Pedro
 
-0.03  2012.8.31   ** Ahmad M. Zawawi (aZaWaWi) **
-    - Switch from ace to MIT-style licensed CodeMirror for editing component
+0.04  ????
+    - Added editor theme support
+    - Added active line highlighting
+    - Added setting of visual breakpoints
+    - Added matcher highlighting
+    - Added Search/Replace functionality
+    - Added visual tab highlighting
 
-0.02  2012.4.12   ** Ahmad M. Zawawi (aZaWaWi) **
+0.03  2012.8.31
+    - Switch from ace to MIT-style licensed CodeMirror for editing component
+    - Added F11 fullscreen support
+
+0.02  2012.4.12
     - Pedro script can now open the default browser after starting the 
       webserver daemon.
     - Increased the default size of Pedro editor window
@@ -11,5 +20,5 @@ Changes for Mojolicious-Plugin-Pedro
     - Added missing dependencies
     - Added more documentation and linked bugs to code.google.com
 
-0.01  2012.4.11   ** Ahmad M. Zawawi (aZaWaWi) **
+0.01  2012.4.11
     - Initial release to CPAN

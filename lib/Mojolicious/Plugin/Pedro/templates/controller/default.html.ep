@@ -4,12 +4,28 @@
 <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css"/>
 <link rel="stylesheet" href="css/pedro.css" type="text/css"/>
 <link rel="stylesheet" href="css/codemirror.css" type="text/css"/>
+<link rel="stylesheet" href="css/dialog.css">
+<link rel="stylesheet" href="css/theme/neat.css">
+<link rel="stylesheet" href="css/theme/elegant.css">
+<link rel="stylesheet" href="css/theme/erlang-dark.css">
+<link rel="stylesheet" href="css/theme/night.css">
+<link rel="stylesheet" href="css/theme/monokai.css">
+<link rel="stylesheet" href="css/theme/cobalt.css">
+<link rel="stylesheet" href="css/theme/eclipse.css">
+<link rel="stylesheet" href="css/theme/rubyblue.css">
+<link rel="stylesheet" href="css/theme/lesser-dark.css">
+<link rel="stylesheet" href="css/theme/xq-dark.css">
+<link rel="stylesheet" href="css/theme/ambiance.css">
+<link rel="stylesheet" href="css/theme/blackboard.css">
+<link rel="stylesheet" href="css/theme/vibrant-ink.css">
 <script src="../js/jquery.js"></script>
 <script src="../js/pedro.js"></script>
 <script src="../js/codemirror.js"></script>
 <script src="../js/perl.js"></script>
-<script src="../js/jquery-ui-1.8.18.custom.min.js"></script>
-
+<script src="../js/util/searchcursor.js"></script>
+<script src="../js/util/match-highlighter.js"></script>
+<script src="../js/util/search.js"></script>
+<script src="../js/util/dialog.js"></script>
 <script type="text/javascript">
 	$(function() {
 		StartPedro("editor");
@@ -31,14 +47,38 @@ print <<'...';
 1
 2
 3
-...
-		</textarea>
+...</textarea>
 	</div>
-	<br/>
 	<p>
 		<strong>F11</strong> for enter/exit fullscreen
 		<br/>
 		<strong>ESC</strong> to exit fullscreen
+		<br/>
+	Select a theme: <select id="theme_selector">
+		<option selected>default</option>
+		<option>ambiance</option>
+		<option>blackboard</option>
+		<option>cobalt</option>
+		<option>eclipse</option>
+		<option>elegant</option>
+		<option>erlang-dark</option>
+		<option>lesser-dark</option>
+		<option>monokai</option>
+		<option>neat</option>
+		<option>night</option>
+		<option>rubyblue</option>
+		<option>vibrant-ink</option>
+		<option>xq-dark</option>
+	</select>
+	<br/>
+	<dl>
+		<dt>Ctrl-F / Cmd-F</dt><dd>Start searching</dd>
+		<dt>Ctrl-G / Cmd-G</dt><dd>Find next</dd>
+		<dt>Shift-Ctrl-G / Shift-Cmd-G</dt><dd>Find previous</dd>
+		<dt>Shift-Ctrl-F / Cmd-Option-F</dt><dd>Replace</dd>
+		<dt>Shift-Ctrl-R / Shift-Cmd-Option-F</dt><dd>Replace all</dd>
+	</dl>
 	</p>
+
  </body>
 </html>
