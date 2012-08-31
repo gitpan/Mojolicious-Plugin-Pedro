@@ -1,6 +1,9 @@
 Changes for Mojolicious-Plugin-Pedro
 
-0.04  ????
+0.05  2012.9.1
+    - Added run on Perlito5 option
+
+0.04  2012.9.1
     - Added editor theme support
     - Added active line highlighting
     - Added setting of visual breakpoints

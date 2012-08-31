@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Pedro!</title>
-<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css"/>
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" type="text/css"/>
 <link rel="stylesheet" href="css/pedro.css" type="text/css"/>
 <link rel="stylesheet" href="css/codemirror.css" type="text/css"/>
 <link rel="stylesheet" href="css/dialog.css">
@@ -26,6 +26,8 @@
 <script src="../js/util/match-highlighter.js"></script>
 <script src="../js/util/search.js"></script>
 <script src="../js/util/dialog.js"></script>
+<script src="../js/perlito5.js"></script>
+<script src="../js/jquery-ui-1.8.23.custom.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		StartPedro("editor");
@@ -34,7 +36,6 @@
 </head>
 <body>
 
-	<div>
 		<textarea id="editor" name="editor"># a comment; 
 use v5.10;
 use strict; 
@@ -48,37 +49,55 @@ print <<'...';
 2
 3
 ...</textarea>
-	</div>
-	<p>
+	<div style="position: absolute; left: 52%; top:0px;">
+		<br/>
 		<strong>F11</strong> for enter/exit fullscreen
 		<br/>
 		<strong>ESC</strong> to exit fullscreen
 		<br/>
-	Select a theme: <select id="theme_selector">
-		<option selected>default</option>
-		<option>ambiance</option>
-		<option>blackboard</option>
-		<option>cobalt</option>
-		<option>eclipse</option>
-		<option>elegant</option>
-		<option>erlang-dark</option>
-		<option>lesser-dark</option>
-		<option>monokai</option>
-		<option>neat</option>
-		<option>night</option>
-		<option>rubyblue</option>
-		<option>vibrant-ink</option>
-		<option>xq-dark</option>
-	</select>
-	<br/>
-	<dl>
-		<dt>Ctrl-F / Cmd-F</dt><dd>Start searching</dd>
-		<dt>Ctrl-G / Cmd-G</dt><dd>Find next</dd>
-		<dt>Shift-Ctrl-G / Shift-Cmd-G</dt><dd>Find previous</dd>
-		<dt>Shift-Ctrl-F / Cmd-Option-F</dt><dd>Replace</dd>
-		<dt>Shift-Ctrl-R / Shift-Cmd-Option-F</dt><dd>Replace all</dd>
-	</dl>
-	</p>
+		Select a theme: <select id="theme_selector">
+			<option selected>default</option>
+			<option>ambiance</option>
+			<option>blackboard</option>
+			<option>cobalt</option>
+			<option>eclipse</option>
+			<option>elegant</option>
+			<option>erlang-dark</option>
+			<option>lesser-dark</option>
+			<option>monokai</option>
+			<option>neat</option>
+			<option>night</option>
+			<option>rubyblue</option>
+			<option>vibrant-ink</option>
+			<option>xq-dark</option>
+		</select>
+		<br/>
+		<dl>
+			<dt>Ctrl-F / Cmd-F</dt><dd>Start searching</dd>
+			<dt>Ctrl-G / Cmd-G</dt><dd>Find next</dd>
+			<dt>Shift-Ctrl-G / Shift-Cmd-G</dt><dd>Find previous</dd>
+			<dt>Shift-Ctrl-F / Cmd-Option-F</dt><dd>Replace</dd>
+			<dt>Shift-Ctrl-R / Shift-Cmd-Option-F</dt><dd>Replace all</dd>
+		</dl>
+	</div>
+	
+		<button id="run_on_perlito">Run on Perlito</button>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Output:</a></li>
+				<li><a href="#tabs-2">Compiler log</a></li>
+				<li><a href="#tabs-3">Compiled to Javascript</a></li>
+			</ul>
+			<div id="tabs-1">
+				<textarea id="print-result" readonly="true" cols="70" rows="5"></textarea><br/>
+			</div>
+			<div id="tabs-2">
+				<textarea id="log-result" readonly="true" cols="70" rows="5"></textarea><br/>
+			</div>
+			<div id="tabs-3">
+				<textarea id="js-result" readonly="true" cols="70" rows="5"></textarea><br/>
+			</div>
+		</div>
 
  </body>
 </html>

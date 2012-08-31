@@ -31,11 +31,12 @@ lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-icons_228ef1_256x
 lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-icons_ef8c08_256x240.png
 lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-icons_ffd27a_256x240.png
 lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/images/ui-icons_ffffff_256x240.png
-lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/jquery-ui-1.8.18.custom.css
+lib/Mojolicious/Plugin/Pedro/public/css/ui-lightness/jquery-ui-1.8.23.custom.css
 lib/Mojolicious/Plugin/Pedro/public/js/codemirror.js
-lib/Mojolicious/Plugin/Pedro/public/js/jquery-ui-1.8.18.custom.min.js
+lib/Mojolicious/Plugin/Pedro/public/js/jquery-ui-1.8.23.custom.min.js
 lib/Mojolicious/Plugin/Pedro/public/js/pedro.js
 lib/Mojolicious/Plugin/Pedro/public/js/perl.js
+lib/Mojolicious/Plugin/Pedro/public/js/perlito5.js
 lib/Mojolicious/Plugin/Pedro/public/js/util/dialog.js
 lib/Mojolicious/Plugin/Pedro/public/js/util/match-highlighter.js
 lib/Mojolicious/Plugin/Pedro/public/js/util/search.js
