@@ -9,7 +9,7 @@ WriteMakefile(
     ABSTRACT_FROM => 'lib/Mojolicious/Plugin/Pedro.pm',
     AUTHOR        => 'Ahmad M. Zawawi <ahmad.zawawi@gmail.com>',
     PREREQ_PM     => {
-        'Mojolicious'   => '2.80',
+        'Mojolicious'   => '3.36',
         'PPI'           => '1.215',
         'Browser::Open' => '0.04',
     },

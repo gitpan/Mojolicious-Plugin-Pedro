@@ -1,0 +1,17 @@
+html {
+	margin: 0px 0px 0px 0px;
+	font: Arial 12px normal;
+}
+.CodeMirror {
+	border: 1px solid #aaa;
+	width: 50%;
+	height: 50%;
+}
+.CodeMirror-fullscreen {
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}

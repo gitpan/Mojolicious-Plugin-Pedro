@@ -1,35 +1,37 @@
 package Mojolicious::Plugin::Pedro;
 
 use Mojo::Base 'Mojolicious::Plugin';
-use File::Basename 'dirname';
-use File::Spec::Functions 'catdir';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub register {
     my ( $self, $app ) = @_;
 
-    # Add "templates" and "public" subdirectories to
-    # renderer and static paths
+    # Add "templates" and "public" subdirectories to renderer and static
+    # paths
     my $base = __FILE__;
     $base =~ s/\.pm//;
-    push @{ $app->renderer->paths }, catdir( $base, 'templates' );
-    push @{ $app->static->paths },   catdir( $base, 'public' );
+    require File::Spec;
+    push @{ $app->renderer->paths }, File::Spec->catdir( $base, 'templates' );
+    push @{ $app->static->paths },   File::Spec->catdir( $base, 'public' );
 
     # Prefix /pedro routing
     my $prefix = 'pedro';
-    my $routes = $app->routes->waypoint("/$prefix")->to(
-        'controller#default',
+    my $route  = $app->routes->route("/$prefix")->to(
+        'controller#',
         namespace  => __PACKAGE__,
         plugin     => $self,
         prefix     => $prefix,
         main_title => 'Pedro!',
     );
-    $routes->post('/line_tokens')->to('controller#line_tokens');
+    $route->get('/')->to('#default');
+    $route->post('/line_tokens')->to('controller#line_tokens');
 }
 
 1;
 __END__
+
+=pod
 
 =head1 NAME
 

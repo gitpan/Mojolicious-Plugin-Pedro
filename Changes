@@ -1,5 +1,8 @@
 Changes for Mojolicious-Plugin-Pedro
 
+0.03  2012.8.31   ** Ahmad M. Zawawi (aZaWaWi) **
+    - Switch from ace to MIT-style licensed CodeMirror for editing component
+
 0.02  2012.4.12   ** Ahmad M. Zawawi (aZaWaWi) **
     - Pedro script can now open the default browser after starting the 
       webserver daemon.

@@ -1,18 +1,15 @@
 <html>
 <head>
 <title>Pedro!</title>
-<style>
-#editor {
-	position: absolute;
-	width: 980px; 
-	height: 554px; 
-}
-</style>
-<script src="../js/jquery.js" type="text/javascript"></script>
-<script src="../js/ace/ace.js" type="text/javascript"></script>
-<script src="../js/ace/theme-eclipse.js" type="text/javascript"></script>
-<script src="../js/ace/mode-perl.js" type="text/javascript"></script>
-<script src="../js/pedro.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css"/>
+<link rel="stylesheet" href="css/pedro.css" type="text/css"/>
+<link rel="stylesheet" href="css/codemirror.css" type="text/css"/>
+<script src="../js/jquery.js"></script>
+<script src="../js/pedro.js"></script>
+<script src="../js/codemirror.js"></script>
+<script src="../js/perl.js"></script>
+<script src="../js/jquery-ui-1.8.18.custom.min.js"></script>
+
 <script type="text/javascript">
 	$(function() {
 		StartPedro("editor");
@@ -20,18 +17,28 @@
 </script>
 </head>
 <body>
-	<div id="editor"># a comment; 
+
+	<div>
+		<textarea id="editor" name="editor"># a comment; 
 use v5.10;
 use strict; 
 use warnings; 
 
-my $foo = "Pedro";
-say "Hello $foo";
+my $string = "Pedro";
+my $number = 10;
+say "Hello $string";
 print <<'...';
 1
 2
 3
 ...
+		</textarea>
 	</div>
-</body>
+	<br/>
+	<p>
+		<strong>F11</strong> for enter/exit fullscreen
+		<br/>
+		<strong>ESC</strong> to exit fullscreen
+	</p>
+ </body>
 </html>
