@@ -1,7 +1,7 @@
 package Mojolicious::Plugin::Pedro::Controller;
 use Mojo::Base 'Mojolicious::Controller';
 
-our $VERSION = '0.02';
+our $VERSION = '0.06';
 
 sub line_tokens {
     my $self = shift;

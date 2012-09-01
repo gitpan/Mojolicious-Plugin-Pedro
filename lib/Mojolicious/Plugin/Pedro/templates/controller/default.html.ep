@@ -20,13 +20,14 @@
 <link rel="stylesheet" href="css/theme/vibrant-ink.css">
 <script src="../js/jquery.js"></script>
 <script src="../js/pedro.js"></script>
-<script src="../js/codemirror.js"></script>
-<script src="../js/perl.js"></script>
-<script src="../js/util/searchcursor.js"></script>
-<script src="../js/util/match-highlighter.js"></script>
-<script src="../js/util/search.js"></script>
-<script src="../js/util/dialog.js"></script>
-<script src="../js/perlito5.js"></script>
+<script src="../js/codemirror/codemirror.js"></script>
+<script src="../js/codemirror/perl.js"></script>
+<script src="../js/codemirror/javascript.js"></script>
+<script src="../js/codemirror/util/searchcursor.js"></script>
+<script src="../js/codemirror/util/match-highlighter.js"></script>
+<script src="../js/codemirror/util/search.js"></script>
+<script src="../js/codemirror/util/dialog.js"></script>
+<script src="../js/perlito/perlito5.js"></script>
 <script src="../js/jquery-ui-1.8.23.custom.min.js"></script>
 <script type="text/javascript">
 	$(function() {
@@ -36,10 +37,10 @@
 </head>
 <body>
 
-		<textarea id="editor" name="editor"># a comment; 
+		<textarea id="editor" name="editor" class="editor"># a comment; 
 use v5.10;
-use strict; 
-use warnings; 
+use strict;
+use warnings;
 
 my $string = "Pedro";
 my $number = 10;
@@ -50,10 +51,6 @@ print <<'...';
 3
 ...</textarea>
 	<div style="position: absolute; left: 52%; top:0px;">
-		<br/>
-		<strong>F11</strong> for enter/exit fullscreen
-		<br/>
-		<strong>ESC</strong> to exit fullscreen
 		<br/>
 		Select a theme: <select id="theme_selector">
 			<option selected>default</option>
@@ -73,6 +70,8 @@ print <<'...';
 		</select>
 		<br/>
 		<dl>
+			<dt>F11</dt><dd>for enter/exit fullscreen</dd>
+			<dt>ESC</dt><dd>to exit fullscreen</dd>
 			<dt>Ctrl-F / Cmd-F</dt><dd>Start searching</dd>
 			<dt>Ctrl-G / Cmd-G</dt><dd>Find next</dd>
 			<dt>Shift-Ctrl-G / Shift-Cmd-G</dt><dd>Find previous</dd>
@@ -80,21 +79,24 @@ print <<'...';
 			<dt>Shift-Ctrl-R / Shift-Cmd-Option-F</dt><dd>Replace all</dd>
 		</dl>
 	</div>
-	
-		<button id="run_on_perlito">Run on Perlito</button>
-		<div id="tabs">
+		<button id="open_button">Open</button>
+		<button id="save_button">Save</button>
+		<button id="save_as_button">Save As</button>
+		<button id="run_button">Run</button>
+		<button id="run_in_browser_button">Run in Browser</button>
+		<div id="bottom_panel">
 			<ul>
-				<li><a href="#tabs-1">Output:</a></li>
-				<li><a href="#tabs-2">Compiler log</a></li>
-				<li><a href="#tabs-3">Compiled to Javascript</a></li>
+				<li><a href="#output-tab">Output</a></li>
+				<li><a href="#compiler-log-tab">Compiler log</a></li>
+				<li><a href="#js-source-tab">Compiled to Javascript</a></li>
 			</ul>
-			<div id="tabs-1">
+			<div id="output-tab">
 				<textarea id="print-result" readonly="true" cols="70" rows="5"></textarea><br/>
 			</div>
-			<div id="tabs-2">
+			<div id="compiler-log-tab">
 				<textarea id="log-result" readonly="true" cols="70" rows="5"></textarea><br/>
 			</div>
-			<div id="tabs-3">
+			<div id="js-source-tab">
 				<textarea id="js-result" readonly="true" cols="70" rows="5"></textarea><br/>
 			</div>
 		</div>

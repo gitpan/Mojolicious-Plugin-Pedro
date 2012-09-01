@@ -1,5 +1,11 @@
 Changes for Mojolicious-Plugin-Pedro
 
+0.06  2012.9.1
+    - Added more UI buttons for file operations (not implemented)
+    - Various user interface fixes
+    - Added javascript highlighting to "compiled to javascript" tab
+    - Refactor js/ directory structure and added more jQuery refactoring
+
 0.05  2012.9.1
     - Added run on Perlito5 option
 

@@ -1,11 +1,10 @@
 html {
 	margin: 0px 0px 0px 0px;
-	font: Arial 12px normal;
+	font: Arial 11px normal;
 }
 .CodeMirror {
 	border: 1px solid #aaa;
 	width: 50%;
-	height: 50%;
 }
 .CodeMirror-fullscreen {
 	display: block;
@@ -35,4 +34,14 @@ dt {
          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
          background-position: right;
          background-repeat: no-repeat;
+}
+.ui-widget { 
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; 
+	font-size: 11px; 
+}
+#bottom_panel {
+	width: 50%;
+}
+#bottom_panel div textarea {
+	width: 100%;
 }
