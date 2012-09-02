@@ -1,4 +1,4 @@
-use Mojo::Base -strict;
+use Mojo::Base-strict;
 
 use Test::More tests => 3;
 
@@ -8,8 +8,8 @@ use Test::Mojo;
 plugin 'Pedro';
 
 get '/' => sub {
-  my $self = shift;
-  $self->render_text('Hello Mojo!');
+	my $self = shift;
+	$self->render_text('Hello Mojo!');
 };
 
 my $t = Test::Mojo->new;

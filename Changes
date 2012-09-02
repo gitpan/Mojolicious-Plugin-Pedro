@@ -1,5 +1,13 @@
 Changes for Mojolicious-Plugin-Pedro
 
+0.07  2012.9.2
+    - Removed the use of automated open default browser behavior
+    - Select the compiler log tab when an error occurs
+    - Introduced the concept of a selector bar for options, actions and output dialogs
+    - Added tidy code button
+    - Pedro is by default full screen
+    - F1 tries to search for help (not fully working though)
+
 0.06  2012.9.1
     - Added more UI buttons for file operations (not implemented)
     - Various user interface fixes

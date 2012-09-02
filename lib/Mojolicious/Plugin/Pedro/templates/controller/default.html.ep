@@ -1,23 +1,23 @@
 <html>
 <head>
 <title>Pedro!</title>
-<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.23.custom.css" type="text/css"/>
-<link rel="stylesheet" href="css/pedro.css" type="text/css"/>
-<link rel="stylesheet" href="css/codemirror.css" type="text/css"/>
-<link rel="stylesheet" href="css/dialog.css">
-<link rel="stylesheet" href="css/theme/neat.css">
-<link rel="stylesheet" href="css/theme/elegant.css">
-<link rel="stylesheet" href="css/theme/erlang-dark.css">
-<link rel="stylesheet" href="css/theme/night.css">
-<link rel="stylesheet" href="css/theme/monokai.css">
-<link rel="stylesheet" href="css/theme/cobalt.css">
-<link rel="stylesheet" href="css/theme/eclipse.css">
-<link rel="stylesheet" href="css/theme/rubyblue.css">
-<link rel="stylesheet" href="css/theme/lesser-dark.css">
-<link rel="stylesheet" href="css/theme/xq-dark.css">
-<link rel="stylesheet" href="css/theme/ambiance.css">
-<link rel="stylesheet" href="css/theme/blackboard.css">
-<link rel="stylesheet" href="css/theme/vibrant-ink.css">
+<link rel="stylesheet" href="../css/ui-lightness/jquery-ui-1.8.23.custom.css" type="text/css"/>
+<link rel="stylesheet" href="../css/pedro.css" type="text/css"/>
+<link rel="stylesheet" href="../css/codemirror.css" type="text/css"/>
+<link rel="stylesheet" href="../css/dialog.css">
+<link rel="stylesheet" href="../css/theme/neat.css">
+<link rel="stylesheet" href="../css/theme/elegant.css">
+<link rel="stylesheet" href="../css/theme/erlang-dark.css">
+<link rel="stylesheet" href="../css/theme/night.css">
+<link rel="stylesheet" href="../css/theme/monokai.css">
+<link rel="stylesheet" href="../css/theme/cobalt.css">
+<link rel="stylesheet" href="../css/theme/eclipse.css">
+<link rel="stylesheet" href="../css/theme/rubyblue.css">
+<link rel="stylesheet" href="../css/theme/lesser-dark.css">
+<link rel="stylesheet" href="../css/theme/xq-dark.css">
+<link rel="stylesheet" href="../css/theme/ambiance.css">
+<link rel="stylesheet" href="../css/theme/blackboard.css">
+<link rel="stylesheet" href="../css/theme/vibrant-ink.css">
 <script src="../js/jquery.js"></script>
 <script src="../js/pedro.js"></script>
 <script src="../js/codemirror/codemirror.js"></script>
@@ -37,22 +37,42 @@
 </head>
 <body>
 
-		<textarea id="editor" name="editor" class="editor"># a comment; 
-use v5.10;
+		<textarea id="editor" name="editor" class="editor">#!/usr/bin/env perl
+
+use 5.010;
 use strict;
 use warnings;
 
-my $string = "Pedro";
-my $number = 10;
-say "Hello $string";
-print <<'...';
-1
-2
-3
-...</textarea>
-	<div style="position: absolute; left: 52%; top:0px;">
-		<br/>
-		Select a theme: <select id="theme_selector">
+say 'START';
+
+my $fred = 'fred';
+
+foreach ( 0 .. 7 ) {
+	my $line = $_;
+	last unless defined $line; # exit loop if $line is not defined
+	print "$_ : $line \n";
+}
+
+my %HoH = (
+flintstones=>{
+husband=>"fred",
+pal=>"barney",
+},
+jetsons=>{
+husband=>"george",
+wife=>"jane",
+"his boy"=>"elroy",  # Key quotes needed.
+},
+simpsons=>{husband=>"homer",wife=>"marge",kid=>"bart",},
+);
+
+say 'END';
+
+1;
+
+__END__</textarea>
+	<div id="options_dialog">
+		Theme: <select id="theme_selector">
 			<option selected>default</option>
 			<option>ambiance</option>
 			<option>blackboard</option>
@@ -68,10 +88,12 @@ print <<'...';
 			<option>vibrant-ink</option>
 			<option>xq-dark</option>
 		</select>
-		<br/>
+	</div>
+	<div id="help_dialog">
 		<dl>
-			<dt>F11</dt><dd>for enter/exit fullscreen</dd>
-			<dt>ESC</dt><dd>to exit fullscreen</dd>
+			<dt>F1</dt><dd>Display context-sensitive help for selected text</dd>
+			<dt>F11</dt><dd>Toggle fullscreen mode</dd>
+			<dt>ESC</dt><dd>Exit fullscreen</dd>
 			<dt>Ctrl-F / Cmd-F</dt><dd>Start searching</dd>
 			<dt>Ctrl-G / Cmd-G</dt><dd>Find next</dd>
 			<dt>Shift-Ctrl-G / Shift-Cmd-G</dt><dd>Find previous</dd>
@@ -79,27 +101,42 @@ print <<'...';
 			<dt>Shift-Ctrl-R / Shift-Cmd-Option-F</dt><dd>Replace all</dd>
 		</dl>
 	</div>
+	<div id="actions_dialog">
+		<button id="perl_tidy_button">Tidy Code</button>
+		<button id="run_in_browser_button">Run in Browser</button>
+		<br/>
 		<button id="open_button">Open</button>
 		<button id="save_button">Save</button>
 		<button id="save_as_button">Save As</button>
 		<button id="run_button">Run</button>
-		<button id="run_in_browser_button">Run in Browser</button>
-		<div id="bottom_panel">
+	</div>
+	<div id="output_dialog">
+		<div id="output_tabs">
 			<ul>
 				<li><a href="#output-tab">Output</a></li>
-				<li><a href="#compiler-log-tab">Compiler log</a></li>
+				<li><a href="#log-tab">Log</a></li>
 				<li><a href="#js-source-tab">Compiled to Javascript</a></li>
 			</ul>
 			<div id="output-tab">
 				<textarea id="print-result" readonly="true" cols="70" rows="5"></textarea><br/>
 			</div>
-			<div id="compiler-log-tab">
+			<div id="log-tab">
 				<textarea id="log-result" readonly="true" cols="70" rows="5"></textarea><br/>
 			</div>
 			<div id="js-source-tab">
 				<textarea id="js-result" readonly="true" cols="70" rows="5"></textarea><br/>
 			</div>
 		</div>
-
+	</div>
+	<div id="selector">
+		<div id="actions_dialog_selector">
+		</div>
+		<div id="output_dialog_selector">
+		</div>
+		<div id="options_dialog_selector">
+		</div>
+		<div id="selector_text">
+		</div>
+	</div>
  </body>
 </html>

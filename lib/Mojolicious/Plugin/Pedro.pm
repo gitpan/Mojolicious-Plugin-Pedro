@@ -2,30 +2,32 @@ package Mojolicious::Plugin::Pedro;
 
 use Mojo::Base 'Mojolicious::Plugin';
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub register {
-    my ( $self, $app ) = @_;
+	my ( $self, $app ) = @_;
 
-    # Add "templates" and "public" subdirectories to renderer and static
-    # paths
-    my $base = __FILE__;
-    $base =~ s/\.pm//;
-    require File::Spec;
-    push @{ $app->renderer->paths }, File::Spec->catdir( $base, 'templates' );
-    push @{ $app->static->paths },   File::Spec->catdir( $base, 'public' );
+	# Add "templates" and "public" subdirectories to renderer and static
+	# paths
+	my $base = __FILE__;
+	$base =~ s/\.pm//;
+	require File::Spec;
+	push @{ $app->renderer->paths }, File::Spec->catdir( $base, 'templates' );
+	push @{ $app->static->paths },   File::Spec->catdir( $base, 'public' );
 
-    # Prefix /pedro routing
-    my $prefix = 'pedro';
-    my $route  = $app->routes->route("/$prefix")->to(
-        'controller#',
-        namespace  => __PACKAGE__,
-        plugin     => $self,
-        prefix     => $prefix,
-        main_title => 'Pedro!',
-    );
-    $route->get('/')->to('#default');
-    $route->post('/line_tokens')->to('controller#line_tokens');
+	# Prefix /pedro routing
+	my $prefix = 'pedro';
+	my $route  = $app->routes->route("/$prefix")->to(
+		'controller#',
+		namespace  => __PACKAGE__,
+		plugin     => $self,
+		prefix     => $prefix,
+		main_title => 'Pedro!',
+	);
+	$route->get('/')->to('#default');
+	#$route->post('/line_tokens')->to('controller#line_tokens');
+	$route->post('/help_search')->to('controller#help_search');
+	$route->post('/perl_tidy')->to('controller#perl_tidy');
 }
 
 1;
