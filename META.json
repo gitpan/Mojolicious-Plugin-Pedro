@@ -33,12 +33,12 @@
       "runtime" : {
          "requires" : {
             "Mojolicious" : "3.36",
-            "PPI" : "1.215",
+            "Perl::Critic" : "1.118",
             "Perl::Tidy" : "20120714",
             "Pod::Index" : "0.14"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.07"
+   "version" : "0.08"
 }

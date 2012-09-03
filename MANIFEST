@@ -39,6 +39,8 @@ lib/Mojolicious/Plugin/Pedro/public/js/codemirror/util/dialog.js
 lib/Mojolicious/Plugin/Pedro/public/js/codemirror/util/match-highlighter.js
 lib/Mojolicious/Plugin/Pedro/public/js/codemirror/util/search.js
 lib/Mojolicious/Plugin/Pedro/public/js/codemirror/util/searchcursor.js
+lib/Mojolicious/Plugin/Pedro/public/js/humane/humane.min.js
+lib/Mojolicious/Plugin/Pedro/public/js/humane/libnotify.css
 lib/Mojolicious/Plugin/Pedro/public/js/jquery-ui-1.8.23.custom.min.js
 lib/Mojolicious/Plugin/Pedro/public/js/pedro.js
 lib/Mojolicious/Plugin/Pedro/public/js/perlito/perlito5.js

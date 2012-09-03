@@ -16,6 +16,7 @@ html {
 	height: 10px;
 	opacity: 0.3;
 	background-color: red;
+	border-radius: 5px;
 }
 #actions_dialog_selector {
 	float: left;
@@ -23,6 +24,7 @@ html {
 	height: 10px;
 	opacity: 0.3;
 	background-color: green;
+	border-radius: 5px;
 }
 #output_dialog_selector {
 	float: left;
@@ -30,6 +32,7 @@ html {
 	height: 10px;
 	opacity: 0.3;
 	background-color: blue;
+	border-radius: 5px;
 }
 .CodeMirror {
 	border: 1px solid #aaa;

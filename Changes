@@ -1,5 +1,9 @@
 Changes for Mojolicious-Plugin-Pedro
 
+0.08  2012.9.3
+    - Added simple Perl::Critic support
+    - Humane.js modern style notifications for the dialog selector bar
+
 0.07  2012.9.2
     - Removed the use of automated open default browser behavior
     - Select the compiler log tab when an error occurs

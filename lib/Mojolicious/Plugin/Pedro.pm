@@ -2,7 +2,7 @@ package Mojolicious::Plugin::Pedro;
 
 use Mojo::Base 'Mojolicious::Plugin';
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub register {
 	my ( $self, $app ) = @_;
@@ -25,9 +25,9 @@ sub register {
 		main_title => 'Pedro!',
 	);
 	$route->get('/')->to('#default');
-	#$route->post('/line_tokens')->to('controller#line_tokens');
 	$route->post('/help_search')->to('controller#help_search');
 	$route->post('/perl_tidy')->to('controller#perl_tidy');
+	$route->post('/perl_critic')->to('controller#perl_critic');
 }
 
 1;
