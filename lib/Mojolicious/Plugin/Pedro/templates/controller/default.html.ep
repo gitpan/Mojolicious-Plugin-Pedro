@@ -32,8 +32,7 @@
 
 	<!-- CodeMirror editor -->
 	<script src="../js/codemirror/codemirror.js"></script>
-	<script src="../js/codemirror/perl.js"></script>
-	<script src="../js/codemirror/javascript.js"></script>
+	<script src="../js/codemirror/util/loadmode.js"></script>
 	<script src="../js/codemirror/util/searchcursor.js"></script>
 	<script src="../js/codemirror/util/match-highlighter.js"></script>
 	<script src="../js/codemirror/util/search.js"></script>
@@ -91,22 +90,49 @@ say 'END';
 
 __END__</textarea>
 	<div id="options_dialog">
-		Theme: <select id="theme_selector">
-			<option selected>default</option>
-			<option>ambiance</option>
-			<option>blackboard</option>
-			<option>cobalt</option>
-			<option>eclipse</option>
-			<option>elegant</option>
-			<option>erlang-dark</option>
-			<option>lesser-dark</option>
-			<option>monokai</option>
-			<option>neat</option>
-			<option>night</option>
-			<option>rubyblue</option>
-			<option>vibrant-ink</option>
-			<option>xq-dark</option>
-		</select>
+		<table>
+			<tr>
+				<td>Mode:</td>
+				<td>
+					<select id="mode_selector">
+						<option value="clike">C, C++, C#</option>
+						<option value="css">CSS</option>
+						<option value="diff">diff</option>
+						<option value="javascript">JavaScript</option>
+						<option value="less">LESS</option>
+						<option value="markdown">Github Markdown</option>
+						<option value="perl" selected>Perl</option>
+						<option value="plsql">PL/SQL</option>
+						<option value="properties">Properties files</option>
+						<option value="shell">Shell</option>
+						<option value="stex">sTeX, LaTeX</option>
+						<option value="xml">XML/HTML</option>
+						<option value="yaml">YAML</option>
+					</select>
+				</td>
+			</tr>
+		<tr>
+			<td>Theme:</td>
+			<td>
+				<select id="theme_selector">
+					<option selected>default</option>
+					<option>ambiance</option>
+					<option>blackboard</option>
+					<option>cobalt</option>
+					<option>eclipse</option>
+					<option>elegant</option>
+					<option>erlang-dark</option>
+					<option>lesser-dark</option>
+					<option>monokai</option>
+					<option>neat</option>
+					<option>night</option>
+					<option>rubyblue</option>
+					<option>vibrant-ink</option>
+					<option>xq-dark</option>
+				</select>
+			</td>
+		</tr>
+		</table>
 	</div>
 	<div id="help_dialog">
 		<dl>

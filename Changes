@@ -1,5 +1,8 @@
 Changes for Mojolicious-Plugin-Pedro
 
+0.09  2012.9.3
+    - Added more language modes
+
 0.08  2012.9.3
     - Added simple Perl::Critic support
     - Humane.js modern style notifications for the dialog selector bar

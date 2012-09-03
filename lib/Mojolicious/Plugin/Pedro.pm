@@ -2,7 +2,7 @@ package Mojolicious::Plugin::Pedro;
 
 use Mojo::Base 'Mojolicious::Plugin';
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 sub register {
 	my ( $self, $app ) = @_;

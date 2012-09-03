@@ -1,7 +1,7 @@
 package Mojolicious::Plugin::Pedro::Controller;
 use Mojo::Base 'Mojolicious::Controller';
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 use Config;
 
